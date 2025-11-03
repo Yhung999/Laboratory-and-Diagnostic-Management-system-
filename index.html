@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LabDiag — Advanced Diagnostic Management</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">LD</div>
+        <div>
+          <h1>LabDiag</h1>
+          <p class="tagline">Laboratory Diagnostic Management</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="themeToggle" class="icon-btn" title="Toggle theme">🌗</button>
+        <nav class="nav">
+          <button class="nav-btn" data-route="home">Home</button>
+          <button class="nav-btn" data-route="signup">Signup</button>
+          <button class="nav-btn" data-route="login">Login</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+  
+      <aside class="sidebar card">
+        <div class="profile">
+          <div class="avatar">G</div>
+          <div>
+            <div id="sidebarName">Guest</div>
+            <div class="muted">Not signed in</div>
+          </div>
+        </div>
+
+        <div class="menu">
+          <button class="menu-btn" data-route="patient">Patient Portal</button>
+          <button class="menu-btn" data-route="diagnose">Run Diagnosis</button>
+          <button class="menu-btn" data-route="history">My Results</button>
+          <button class="menu-btn admin-only hidden" data-route="admin">Admin Dashboard</button>
+        </div>
+
+        <div class="quick">
+          <button id="printLast" class="btn ghost">Print Last</button>
+          <button id="exportAll" class="btn ghost">Export CSV</button>
+        </div>
+
+        <p class="muted small">This is the front-end. That can be implemented with <strong>localStorage</strong> or a backend — see comments in app.js (not enabled).</p>
+      </aside>
+
+     
+      <section class="content card" id="view">
+        <!-- Views are injected here by app.js -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>LabDiag • Not for clinical use</div>
+      <div class="muted small">Built with HTML, CSS & vanilla JS</div>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
